@@ -8,18 +8,23 @@ module.exports = {
         ecmaFeatures: {
             jsx: true
         },
-        ecmaVersion: "latest",
+        ecmaVersion: 12,
         sourceType: "module"
     },
     plugins: ["react"],
     rules: {
-        indent: ["error", 4], // Отступ количество пробелов
-        semi: [2, "always"], // Точка с запятой в конце строки
-
-        // Ошибка при наличии пробела при обозночении функции, уберём её
-        "space-before-function-paren": ["error", "never"],
-
-        // Использование двойных кавычек
-        quotes: ["error", "double", { allowTemplateLiterals: true }]
+        //"react/prop-types": "off",
+        semi: [2, "always"],
+        "spaced-comment": [0],
+        indent: ["error", 4, { SwitchCase: 1 }],
+        "space-before-function-paren": ["error", { anonymous: "always", named: "never" }],
+        quotes: [
+            2,
+            "double",
+            {
+                allowTemplateLiterals: true
+            }
+        ],
+        "comma-dangle": ["error", "never"]
     }
 };
