@@ -7,13 +7,14 @@ import GroupList from "./groupList";
 import api from "../api";
 import UserTable from "./usersTable";
 import _ from "lodash";
+
 const Users = () => {
     //console.log("users", users, "users");
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedProf, setSelectedProf] = useState();
     const [professions, setProfessions] = useState();
     const [sortBy, setSortBy] = useState({ iter: "name", order: "asc" });
-    const pageSize = 8;
+    const pageSize = 4;
 
     const [users, setUsers] = useState();
     useEffect(() => {
@@ -23,6 +24,7 @@ const Users = () => {
     const handleDelete = (userId) => {
         setUsers(users.filter((user) => user._id !== userId));
     };
+
     const handleToggleBookMark = (id) => {
         setUsers(
             users.map((user) => {
@@ -106,6 +108,7 @@ const Users = () => {
     }
     return "Loading right now...";
 };
+
 Users.propTypes = {
     users: PropTypes.array
 };
