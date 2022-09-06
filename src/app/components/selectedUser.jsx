@@ -10,7 +10,7 @@ const SelectedUser = ({ userId, history }) => {
         api.users.getById(userId).then((data) => setSelectedUser(data));
     }, []);
 
-    console.log(selectedUser, "selectedUser");
+    //console.log(selectedUser, "selectedUser");
 
     const handleSave = () => {
         history.replace("/users");

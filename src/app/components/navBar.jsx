@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Link } from "react-router-dom";
-import MainPage from "./mainPage";
-import Login from "./login";
+import Main from "./layouts/main";
+import Login from "./layouts/login";
 import SelectedUser from "./selectedUser";
-import Users from "./users";
+import Users from "./layouts/users";
 
 const NavBar = () => {
     return (
@@ -25,7 +25,7 @@ const NavBar = () => {
                     </Link>
                 </li>
             </ul>
-            <Route path="/" exact component={MainPage} />
+            <Route path="/" exact component={Main} />
             <Route path="/login/" component={Login} />
             <Route path="/users/" exact component={Users} />
             <Route

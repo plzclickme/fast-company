@@ -13,6 +13,7 @@ module.exports = {
     },
     plugins: ["react"],
     rules: {
+        "no-unreachable-loop": ["error", { ignore: ["ForInStatement", "ForOfStatement"] }],
         //"react/prop-types": "off",
         semi: [2, "always"],
         "spaced-comment": [0],

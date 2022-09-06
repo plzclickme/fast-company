@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const TableHeader = ({ onSort, selectedSort, columns }) => {
-    console.log(selectedSort.path, "selectedSort.path");
+    //console.log(selectedSort.path, "selectedSort.path");
 
     const strelkaSortRender = (item) => {
         if (selectedSort.path === item && selectedSort.order === "asc") {
